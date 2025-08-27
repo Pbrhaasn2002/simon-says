@@ -5,6 +5,16 @@ import time
 # --- Page Config ---
 st.set_page_config(page_title="Simon Says — Python", page_icon="🎵", layout="centered")
 
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # --- Game Colors ---
 COLORS = ["Red", "Green", "Blue", "Yellow"]
 COLOR_CODES = {
